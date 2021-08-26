@@ -1,10 +1,22 @@
 import "./styles.css";
+import React from "react";
 
-export default function App() {
+const App = () => {
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <div class="title">
+        <h1>Zesty</h1>
+        <h2>
+          A photography project
+          <br />
+          by Ella Fielding
+        </h2>
+      </div>
+      <div class="image-container">
+        <img src="" alt="" />
+      </div>
     </div>
   );
-}
+};
+
+export default App;
