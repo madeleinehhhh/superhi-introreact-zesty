@@ -1,6 +1,8 @@
 :root {
   --clr-bg: #fbdd74;
   --clr-text: #294910;
+  --clr-light: #fff;
+  --clr-neutral: #e8e8e8;
 }
 
 body {
@@ -12,17 +14,85 @@ body {
   position: relative;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  font-family: "Poppins", sans-serif;
 }
 
-.App {
+main {
   display: flex;
   height: 100vh;
   justify-content: space-between;
 }
+h1 {
+  font-weight: 800;
+  font-size: 10vw;
+  margin: 0 1rem;
+  line-height: 1.4;
+}
+h2 {
+  bottom: 0;
+  position: fixed;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 1rem 1rem;
+  font-weight: normal;
+}
 
-.image-container {
+figure {
   background: #fff;
   margin: 0;
   position: relative;
   width: 50vw;
+}
+figcaption {
+  font-size: 2rem;
+  font-weight: normal;
+  position: fixed;
+  text-align: center;
+  z-index: 1;
+  bottom: 0;
+  color: var(--clr-light);
+  margin: 0 auto;
+  padding: 1em 0;
+  width: 50%;
+}
+
+img {
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  width: 50%;
+}
+
+aside {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: var(--clr-neutral);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 2;
+}
+
+.loading-bar {
+  display: grid;
+  grid-row-gap: 1rem;
+  max-width: 50vw;
+  padding: 1vw;
+}
+
+progress {
+  border: 0.1rem solid var(--clr-text);
+  height: 1rem;
+  width: 25rem;
+  max-width: 35vw;
+}
+
+progress[value]::-webkit-progress-bar {
+  background: var(--clr-neutral);
+}
+
+progress[value]::-webkit-progress-value {
+  background: var(--clr-text);
 }
